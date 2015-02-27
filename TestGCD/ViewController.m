@@ -21,6 +21,7 @@
 	
     
    //================================dispatch_group_async的用法======================
+   //当前面的任务都完成后，才发出通知在执行别是东西。。。。。。。。(好像你挺常用的一个方法。。。)
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t group = dispatch_group_create();
@@ -47,7 +48,7 @@
         //TODO:
         //回到主线程
         dispatch_async(dispatch_get_main_queue(), ^{
-            //TODO:
+        //TODO:
         });
     });
     
